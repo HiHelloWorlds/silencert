@@ -1,7 +1,10 @@
 from pyrogram import Client, filters
 
-app = Client("my_session")
+import os
+from pyrogram import Client
 
+session_string = os.getenv("SESSION_STRING")
+app = Client(session_string=session_string)
 
 @app.on_message(filters.group)
 def delete_unwanted_message(client, message):
