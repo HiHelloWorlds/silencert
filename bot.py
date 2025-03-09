@@ -1,6 +1,6 @@
 from pyrogram import Client, filters
 
-app = Client("silencert")
+app = Client("my_session")
 
 
 @app.on_message(filters.group)
